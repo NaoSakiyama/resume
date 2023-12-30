@@ -1,0 +1,98 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+
+        section {
+            padding: 2em;
+            text-align: center;
+        }
+
+        .project {
+            margin-bottom: 20px;
+        }
+
+        .project img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Portfolio</h1>
+    </header>
+
+    <section>
+        <h2>Projects</h2>
+
+        <div class="project">
+            <h3>Project 1</h3>
+            <p>Description of Project 1...</p>
+            <a href="project1.html" id="project1Link">
+                <img src="project1_image.jpg" alt="Project 1 Image">
+            </a>
+        </div>
+
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>Description of Project 2...</p>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+
+    <section>
+        <h2>About Me</h2>
+        <p>
+            Welcome to my portfolio! I am a passionate web developer with a strong background in front-end technologies.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...
+        </p>
+    </section>
+
+    <section>
+        <h2>Contact</h2>
+        <p>
+            Feel free to contact me! You can reach me at <a href="mailto:your.email@example.com">your.email@example.com</a>.
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 My Portfolio</p>
+    </footer>
+
+    <script>
+        // JavaScript code to handle image click event and page redirection
+        var project1Link = document.getElementById('project1Link');
+        project1Link.addEventListener('click', function() {
+            window.location.href = 'project1.html';
+        });
+    </script>
+
+</body>
+</html>

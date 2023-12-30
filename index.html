@@ -27,15 +27,62 @@
 
         .project {
             margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
         }
 
         .project img {
             max-width: 100%;
             height: auto;
             cursor: pointer;
-            width: 160px; 
-            height: 180px;
-            opacity: 0.6; 
+            opacity: 0.6;
+            transition: opacity 0.3s ease, filter 0.3s ease; /* トランジションを追加 */
+        }
+
+        .project::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.2); /* 黒い背景色（透明度を変更可能） */
+            opacity: 0;
+        }
+
+        .project:hover::before {
+            opacity: 0.5; /* カーソルを重ねると不透明になる */
+        }
+
+        .project:hover h3 {
+            color: #989595f8; /* カーソルを重ねたときに色を反転させる */
+        }
+
+        .project-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 1.2em;
+        }
+        .project h3 {
+            margin-bottom: 10px;
+        }
+
+        .project1 img {
+            width: 200px; /* Project 1 の画像サイズ */
+            height: 250px;
+        }
+
+        .project2 img {
+            width: 200px; /* Project 2 の画像サイズ */
+            height: 200px;
+        }
+
+        .project3 img {
+            width: 300px; /* Project 2 の画像サイズ */
+            height: 200px;
         }
 
         footer {
@@ -62,19 +109,24 @@
     <section>
         <h2>Projects</h2>
 
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>Description of Project 1...</p>
+        <div class="project project1">
+            <h3>3DCG Works</h3>
             <a href="project1.html" id="project1Link">
                 <img src="project1_image.jpg" alt="Project 1 Image">
             </a>
         </div>
 
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>Description of Project 2...</p>
+        <div class="project project2">
+            <h3>My Applications</h3>
             <a href="project2.html" id="project2Link">
-                <img src="project2_image.jpg" alt="Project 2 Image">
+                <img src="Project2_image.png" alt="Project 2 Image">
+            </a>
+        </div>
+
+        <div class="project project3">
+            <h3>etc...</h3>
+            <a href="project3.html" id="project3Link">
+                <img src="project3_image.jpeg" alt="Project 3 Image">
             </a>
         </div>
         <!-- Add more projects as needed -->
